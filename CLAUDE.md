@@ -19,7 +19,7 @@ Slack bot ([@slack/bolt](https://slack.dev/bolt-js/)) that reacts with emoji whe
 - **Local**: `app.js` starts a Bolt app on a port
 - **Production**: `netlify/functions/slack.js` wraps Bolt with `AwsLambdaReceiver` for Netlify Functions
 
-**Flow**: message received -> `brbDetector` checks for match -> `reactWithEmoji` adds reactions via Slack API (`already_reacted` errors are swallowed).
+**Flow**: message received -> `awayDetector` checks for match -> `reactWithEmoji` adds reactions via Slack API (`already_reacted` errors are swallowed).
 
 ## Environment Variables
 

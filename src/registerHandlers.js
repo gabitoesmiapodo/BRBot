@@ -1,9 +1,9 @@
-const { containsBRB } = require("./brbDetector");
+const { containsAwayPattern } = require("./awayDetector");
 const { reactWithEmoji } = require("./reactWithEmoji");
 
 function registerHandlers(app) {
   app.message(async ({ message, client }) => {
-    if (!message?.text || !containsBRB(message.text)) {
+    if (!message?.text || !containsAwayPattern(message.text)) {
       return;
     }
 
