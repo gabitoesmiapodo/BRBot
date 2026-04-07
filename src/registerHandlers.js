@@ -14,7 +14,6 @@ function registerHandlers(app) {
     }
 
     const payload = { channel: message.channel, timestamp: message.ts };
-    await reactWithEmoji(client, { ...payload, emoji: "waving-from-afar-right" });
     await reactWithEmoji(client, { ...payload, emoji: `wave${randomSkinTone()}` });
     await reactWithEmoji(client, { ...payload, emoji: "BRBot" });
   });
